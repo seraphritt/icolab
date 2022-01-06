@@ -1,0 +1,20 @@
+{
+  "name": "teste_de_nod",
+  "version": "1.0.0",
+  "description": "",
+  "main": "teste_de_node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon teste_de_node.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "express": "^4.17.2",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

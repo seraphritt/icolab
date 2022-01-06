@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+      
+      #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+      #customers td, #customers th {
+      border: 1px solid rgb(70, 70, 70);
+      padding: 8px;
+    }
+      #customers td.blue {
+      background-color: #92ceff;
+      cursor: pointer;
+    }
+      #customers td.grey {
+      background-color:rgb(70, 70, 70);
+    }
+      #customers td.red1 {
+      background-color: #f34a6f;
+      cursor: pointer;
+    }
+      #customers td.red2 {
+      background-color: #f96585;
+      cursor: pointer;
+    }
+    #customers td.anim {
+      background: rgb(255, 255, 255); 
+      background: linear-gradient(to right, #3fc3a2 50%, rgb(255, 255, 255) 50%) right;
+      background-size: 200%;
+      transition: .3s ease-out;
+    }
+    #customers td.anim:hover {
+      background-position: left;
+    }
+      #customers td.red3 {
+      background-color: #f98585;
+      cursor: pointer;
+    }
+      #customers td.red4 {
+      background-color: #f9a385;
+      cursor: pointer;
+    }
+      #customers tr:nth-child(even){background-color: #ffffff;}
+
+      #customers tr:hover {background-color: rgb(255, 255, 255);}
+
+      #customers td.blue:hover, td.red1:hover, td.red2:hover, td.red3:hover, td.red4:hover ,td.grey:hover {
+        opacity: 0.75;
+        transition: 0.6s;
+}
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #050030;
+        color: white;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div id="app">
+    <table id="customers">
+      <tr>
+        <th>Tarefa</th>
+        <th>Vencido</th>
+        <th>D0</th>
+        <th>D1</th>
+        <th>D2</th>
+        <th>D3</th>
+        <th>Total</th>
+      </tr>
+      <tr>          
+        <td class="anim">{{ info.data[0].TAREFA }}</td>
+        <td class="blue">{{ info.data[0].VENCIDO }}</td>
+        <td class="red1">{{ info.data[0].D0 }}</td>
+        <td class="red2">{{ info.data[0].D1 }}</td>
+        <td class="red3">{{ info.data[0].D2 }}</td>
+        <td class="red4">{{ info.data[0].D3 }}</td>
+        <td class="blue">{{ info.data[0].TOTAL }}</td>
+      </tr>
+      <tr>
+        <td class="anim">{{ info.data[1].TAREFA }}</td>
+        <td class="blue">{{ info.data[1].VENCIDO }}</td>
+        <td class="red1">{{ info.data[1].D0 }}</td>
+        <td class="red2">{{ info.data[1].D1 }}</td>
+        <td class="red3">{{ info.data[1].D2 }}</td>
+        <td class="red4">{{ info.data[1].D3 }}</td>
+        <td class="blue">{{ info.data[1].TOTAL }}</td>
+      </tr>
+      <tr>
+        <td class="anim">{{ info.data[2].TAREFA }}</td>
+        <td class="blue">{{ info.data[2].VENCIDO }}</td>
+        <td class="red1">{{ info.data[2].D0 }}</td>
+        <td class="red2">{{ info.data[2].D1 }}</td>
+        <td class="red3">{{ info.data[2].D2 }}</td>
+        <td class="red4">{{ info.data[2].D3 }}</td>
+        <td class="blue">{{ info.data[2].TOTAL }}</td>
+      </tr>
+      <tr>
+        <td class="anim">{{ info.data[3].TAREFA }}</td>
+        <td class="blue">{{ info.data[3].VENCIDO }}</td>
+        <td class="red1">{{ info.data[3].D0 }}</td>
+        <td class="red2">{{ info.data[3].D1 }}</td>
+        <td class="red3">{{ info.data[3].D2 }}</td>
+        <td class="red4">{{ info.data[3].D3 }}</td>
+        <td class="blue">{{ info.data[3].TOTAL }}</td>
+      </tr>
+      <tr>
+        <td class="grey">{{ info.data[4].TAREFA }}</td>
+        <td class="grey">{{ info.data[4].VENCIDO }}</td>
+        <td class="grey">{{ info.data[4].D0 }}</td>
+        <td class="grey">{{ info.data[4].D1 }}</td>
+        <td class="grey">{{ info.data[4].D2 }}</td>
+        <td class="grey">{{ info.data[4].D3 }}</td>
+        <td class="grey">{{ info.data[4].TOTAL }}</td>
+      </tr>
+    </table>
+    <script src="inst_vue.js"></script> 
+  </div>
+</body>
+</html>
